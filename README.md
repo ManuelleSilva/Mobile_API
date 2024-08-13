@@ -1,1 +1,1 @@
-![Captura de tela 2024-08-12 221523](https://github.com/user-attachments/assets/58bf0e94-4ef2-449e-ac05-4ed38a82db1a)
+![image](https://github.com/user-attachments/assets/726a9727-487f-4221-b6b2-39d1129c1e89)
