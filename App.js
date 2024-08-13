@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, FlatList, ScrollView, ImageBackground} from 'react-native';
 
 const request = async (callback) => {
   const response = await fetch('https://swapi.dev/api/starships/');
@@ -17,6 +17,10 @@ export default function App() {
 
 
   return (
+    <ImageBackground
+      source={require('./assets/images/Bg.png')}
+      style={styles.background}
+    >
     <View style={styles.container}>
       <Text style={styles.title}>Usando API do Star Wars</Text>
       <FlatList
@@ -32,15 +36,18 @@ export default function App() {
       />
 
       <StatusBar style="auto" />
-    </View>
+    </View></ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
   container: {
     marginTop: 22,
     flex: 1,
-    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -49,7 +56,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom:15,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#fff',
+    backgroundColor:'#000'
   },
   items:{
     alignItems: 'left',
